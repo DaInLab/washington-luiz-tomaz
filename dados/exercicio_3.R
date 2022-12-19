@@ -1,60 +1,26 @@
 # Instalando biblioteca readxl para importar para o R arquivos com extensão .xls ou .xlsx.
 if (!("readxl") %in% installed.packages()) install.packages("readxl")
 
-# Carregando a biblioteca
+# Carregando o pacote readxl
 library(readxl)
 
-# Importando o arquivo do exercício 2
-dataframe.ex2 <- read_excel("./dados/exercicio2.xls",skip = 1, col_names = "casas", col_types = c("numeric"))
+# Importando o arquivo do exercício 3
+dataframe.ex3 <- read_excel("./dados/exercicio3.xls",skip = 1, col_names = c("numerofilhos", "familias"), col_types = c("numeric"))
 
-# a) Construir uma tabela de frequências;
-# transformando os dados em vetor
-ex2.em.vetor <- c(dataframe.ex2$casas)
+# Transformando o conjunto de dados em vetor
+v.ex3 <- c(dataframe.ex3$numerofilhos)
 
-# criando a tabela de frequência
-ex2.tabela <-table(ex2.em.vetor)
+# Criando uma função para a moda
+getmode <- function(v.ex3) {
+unico.v.ex3 <- unique(v.ex3)
+unico.v.ex3[which.max(tabulate(match(v.ex3, unico.v.ex3)))]
+}
 
-# imprimindo a tabela de frequência
-ex2.tabela
+# calculando a mediana
+ex3.mediana = median(dataframe.ex3$numerofilhos)
+print(paste("Médiana do número de filhos:", ex3.mediana))
 
-#b) Calcular as medidas de posição e as medidas de dispersão;
-
-#b.1) Medidas de Posiçõo
-#média
-media<-mean(dataframe.ex2$casas)
-media
-
-#mediana 
-mediana <- median(dataframe.ex2$casas)
-mediana
-
-#b.2) Medidas de Dispersão
-#amplitude (range)
-range(ex2.tabela)
-
-#percentis (quantiles) - considerados os três primeiros
-Q1 <- quantile(dataframe.ex2$casas, probs = 0.25)
-Q2 <- quantile(dataframe.ex2$casas, probs = 0.50)
-Q3 <- quantile(dataframe.ex2$casas, probs = 0.75)
-
-#impressão dos percentis
-Q1
-Q2
-Q3
-
-#amplitude interquartil (IQR - interquartile range)
-amplitude.interquartil <- Q3 - Q1
-amplitude.interquartil
-
-#desvio padrão (sd - standard deviation)
-desvio.padrao <- sd(dataframe.ex2$casas, na.rm = FALSE)
-desvio.padrao
-
-#variância
-variancia <- var(dataframe.ex2)
-variancia
-
-# plus: imprimindo o histograma
-hist(ex2.tabela, main="Histograma", xlab="Dados", ylab="Frequência")
-
-
+# calculando a moda
+moda <- getmode(v.ex3)
+print(paste("Moda:",moda))
+      
