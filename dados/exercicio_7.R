@@ -6,7 +6,7 @@ library(readxl)
 library(tidyverse)
 library (ggplot2)
 
-# Importando o arquivo do exercício 7
+# Importando o arquivo do exercício 7 
 df.ex7 <- read_excel("./dados/exercicio7.xls",skip = 1, col_names = c("Áreas", "Atendimentos"), col_types = c("text", "numeric"))
 #view(df.ex7)
 df.ex7

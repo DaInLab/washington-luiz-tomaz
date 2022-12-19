@@ -12,7 +12,7 @@ df.ex9 <- read_excel("./dados/exercicio9.xls",skip = 1, col_names = "Salários",
 # transformando os dados em vetor
 ex9.em.vetor <- c(df.ex9$Salários)
 
-# criando a tabela de frequência
+# criando a tabela de frequência 
 ex9.tabela <-table(ex9.em.vetor)
 
 # imprimindo a tabela de frequência

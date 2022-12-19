@@ -7,7 +7,7 @@ library(readxl)
 # Importando o arquivo do exercício 2
 dataframe.ex2 <- read_excel("./dados/exercicio2.xls",skip = 1, col_names = "casas", col_types = c("numeric"))
 
-# a) Construir uma tabela de frequências;
+# a) Construir uma tabela de frequências; 
 # transformando os dados em vetor
 ex2.em.vetor <- c(dataframe.ex2$casas)
 

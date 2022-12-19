@@ -24,7 +24,7 @@ print(paste("Desvio Padrão das Alturas:", ex8_desviop))
 ex8_varianca <- round(var(df.ex8$Altura),6)
 print(paste("Variância das Alturas:", ex8_varianca))
 
-# calculando a frequência
+# calculando a frequência 
 frq <- table (df.ex8$Altura)
 
 # imprimindo a tabela de frequência

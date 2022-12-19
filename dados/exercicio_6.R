@@ -6,7 +6,7 @@ install.packages("qcc")
 library(readxl)
 library(qcc)
 
-# Importando o arquivo do exercício 6
+# Importando o arquivo do exercício 6 
 dataframe.ex6 <- read_excel("./dados/exercicio6.xls",skip = 1, col_names = c("Qualidade", "N_pessoas"), col_types = c("text", "numeric"))
 #view(df.ex6)
 

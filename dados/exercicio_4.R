@@ -9,7 +9,7 @@ library(readxl)
 # Importando os dados do exercício 4
 df.ex4 <- read_excel("./dados/exercicio4.xls",skip = 1, col_names = "Salários", col_types = c("numeric"))
 
-# distribuição de frequência
+# distribuição de frequência 
 # transformando os dados em vetor
 ex4.em.vetor <- c(df.ex4$Salários)
 

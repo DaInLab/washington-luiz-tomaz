@@ -16,7 +16,7 @@ unico.v.ex3 <- unique(v.ex3)
 unico.v.ex3[which.max(tabulate(match(v.ex3, unico.v.ex3)))]
 }
 
-# calculando a mediana
+# calculando a mediana 
 ex3.mediana = median(dataframe.ex3$numerofilhos)
 print(paste("Médiana do número de filhos:", ex3.mediana))
 

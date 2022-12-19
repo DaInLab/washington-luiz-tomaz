@@ -1,7 +1,7 @@
 # Instalando biblioteca readxl para importar para o R arquivos com extensão .xls ou .xlsx.
 if (!("readxl") %in% installed.packages()) install.packages("readxl")
 install.packages("tidyverse")
-install.packages("ggplot2")
+install.packages("ggplot2") 
 
 # Carregando as bibliotecas
 library(readxl)
